@@ -1,0 +1,125 @@
+$font-size-base: 1rem !default;
+$font-weight-base: 400;
+$primary: #AA0601;
+$secondary: #650300;
+$light-pink: #FBF2F2;
+$white: #fff;
+$black: #000;
+$gray: #707070;
+$light-gray:#DEE2E6;
+$pad: 992px;
+$mobile: 767px;
+
+// 14 16 18 20 24 32 36 42 48 64
+$font-size: (
+    0: $font-size-base *.875, //14
+    1: $font-size-base,
+    2: $font-size-base * 1.125, //18
+    3: $font-size-base * 1.25, //20
+    4: $font-size-base * 1.5, //24
+    5: $font-size-base * 2, //32
+    6: $font-size-base * 2.25, //36
+    7: $font-size-base * 2.625, //42
+    8: $font-size-base * 3, //48
+    9: $font-size-base * 4, //64
+);
+
+@each $key, $value in $font-size {
+    .fz-#{$key} {
+        font-size: $value;
+    }
+}
+
+$font-weight: (
+    1: $font-weight-base,
+    2: $font-weight-base + 100, //500 medium
+    3: $font-weight-base + 300, //700 bold
+    4: $font-weight-base + 500, //900 black
+);
+
+@each $key, $value in $font-weight {
+    .fw-#{$key} {
+        font-weight: $value;
+    }
+}
+
+.fs-italic {
+    font-style: italic;
+}
+
+.text-align-center {
+    text-align: center;
+}
+
+// space 4 8 12 16 24 32 40 48 64 80 96
+$space-base: 4px;
+
+$space: (
+    1: $space-base,
+    2: $space-base * 2, //8
+    3: $space-base * 3, //12
+    4: $space-base * 4, //16
+    5: $space-base * 6, //24
+    6: $space-base * 8, //32
+    7: $space-base * 10, //40
+    8: $space-base * 12, //48
+    9: $space-base * 16, //64
+    10: $space-base * 20, //80
+    11: $space-base * 24, //96
+);
+
+@each $key, $value in $space {
+    // margin
+    .mt-#{$key} {
+        margin-top: $value;
+    }
+
+    .mb-#{$key} {
+        margin-bottom: $value;
+    }
+
+    .ml-#{$key} {
+        margin-left: $value;
+    }
+
+    .mr-#{$key} {
+        margin-right: $value;
+    }
+
+    .mx-#{$key} {
+        margin-right: $value;
+        margin-left: $value;
+    }
+
+    .my-#{$key} {
+        margin-top: $value;
+        margin-bottom: $value;
+    }
+
+    // padding
+    .pt-#{$key} {
+        padding-top: $value;
+    }
+
+    .pb-#{$key} {
+        padding-bottom: $value;
+    }
+
+    .pl-#{$key} {
+        padding-left: $value;
+    }
+
+    .pr-#{$key} {
+        padding-right: $value;
+    }
+
+    .px-#{$key} {
+        padding-left: $value;
+        padding-right: $value;
+    }
+
+    .py-#{$key} {
+        padding-top: $value;
+        padding-bottom: $value;
+    }
+}
